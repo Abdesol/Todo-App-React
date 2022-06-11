@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.icon-button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.icon-button :active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 22px 1px #9a30fd;
+}
