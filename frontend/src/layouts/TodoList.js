@@ -1,20 +1,19 @@
 import '../assets/styles/TodoList.css';
 import '../assets/styles/index.css';
 import { MdDelete } from "react-icons/md"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
-const TodoList = ({todos}) => {
-
+const TodoList = ({todos, handleIsDone, handleDelete}) => {
     return ( 
         <div className="todo-list">
             {todos.map((todo) => (
                 <div className="todo-preview" key={todo.id}>
                     <input className='todo check-box' 
                             type="checkbox" 
-                            checked={todo.isDone}/>
+                            onChange={() => handleIsDone(todo)}/>
                     <h2 className='todo'>{ todo.title }</h2>
-                    <button className='todo icon-button'>
+                    <button className='todo icon-button' onClick={() => handleDelete(todo)}>
                         <MdDelete size="20" style={
                             {
                                 marginBottom: -4
