@@ -1,10 +1,14 @@
 .navbar {
     padding: 20px;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
     border-bottom: 1px solid #f2f2f2;
+    background-color: white;
   }
 
 .navbar h1 {
@@ -15,12 +19,11 @@
     margin-left: auto;
 }
 
-.navbar a {
-    margin-left: 16px;
+.link {
     text-decoration: none;
-    padding: 6px;
+    margin: 10px;
 }
 
-.navbar a:hover {
+.link:hover {
     color: #9a30fd;
 }

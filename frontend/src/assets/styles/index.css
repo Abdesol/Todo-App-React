@@ -8,8 +8,8 @@
 
 .content {
   max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 30px auto;
+  padding: 10px;
 }
 
 .icon-button {
@@ -17,7 +17,11 @@
   border-color: transparent;
 }
 
-.icon-button :active {
+.icon-button :hover {
+  color: #9a30fd;
+}
+
+.icon-button:active {
+  color: #9a30fd;
   transform: scale(0.96);
-  box-shadow: 3px 2px 22px 1px #9a30fd;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../layouts/Navbar";
 import TodoList from "../layouts/TodoList";
 
@@ -19,6 +20,16 @@ const Home = () => {
             id:3,
             title:"Learn react very well",
             isDone:true
+        },
+        {
+            id:4,
+            title:"Learn next after that",
+            isDone:true
+        },
+        {
+            id:5,
+            title:"Sleep",
+            isDone:true
         }
     ]);
 
@@ -37,7 +48,6 @@ const Home = () => {
 
     return ( 
     <div>
-        <Navbar/>
         <TodoList todos={todos} handleIsDone={handleIsDone} handleDelete={handleDelete}/>
     </div> );
 }
