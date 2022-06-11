@@ -8,21 +8,22 @@
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
-    z-index: 1000;
-    align-items: center;
 }
 
 .popup {
     padding: 10px;
     background: #fff;
     border-radius: 5px;
-    position: fixed;
+    position: sticky;
     margin: 0 auto;
     transition: all 5s ease-in-out;
+    top: 30%;
+    width: 500px;
 }
 
 .popup h2 {
     color: #9a30fd;
+    padding: 10px;
 }
 
 .popup .close {
@@ -43,3 +44,10 @@
     max-height: 30%;
     overflow: auto;
 }
+
+.popup h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #9a30fd;
+  }

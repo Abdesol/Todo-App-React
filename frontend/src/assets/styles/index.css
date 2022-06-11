@@ -12,6 +12,12 @@
   padding: 10px;
 }
 
+.text-box {
+  font-size: 15px;
+  padding: 5px;
+  width: 90%;
+}
+
 .icon-button {
   background-color: transparent;
   border-color: transparent;
@@ -29,8 +35,8 @@
 .button {
   font-size: 18px;
   display: flex;
-  position: absolute;
-  left: 40%;
+  position: sticky;
+  margin: auto;
   margin-top: 20px;
   background: #9a30fd;
   color: #fff;
@@ -38,10 +44,4 @@
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.popup {
-  position: absolute;
-  left: 40%;
-  top: 50%;
 }

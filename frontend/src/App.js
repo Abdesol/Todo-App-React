@@ -32,45 +32,55 @@ function App() {
           title:"Sleep",
           isDone:true
       }
-  ]);
+    ]);
 
-  const [showAddTodo, setShowAddTodo] = useState(false);
+    const [showAddTodo, setShowAddTodo] = useState(false);
 
-  const handleIsDone = (todo) => {
-      var todos_copy = todos;
-      var index = todos_copy.indexOf(todo);
-      todo.isDone = !todo.isDone;
-      todos_copy[index] = todo;
-      setTodos(todos_copy);
-  }
+    const handleIsDone = (todo) => {
+        var todos_copy = todos;
+        var index = todos_copy.indexOf(todo);
+        todo.isDone = !todo.isDone;
+        todos_copy[index] = todo;
+        setTodos(todos_copy);
+    }
 
-  const handleDelete = (todo) => {
-      var todos_copy = todos.filter(t => t.id !== todo.id);
-      setTodos(todos_copy);
-  }
+    const handleDelete = (todo) => {
+        var todos_copy = todos.filter(t => t.id !== todo.id);
+        setTodos(todos_copy);
+    }
 
-  const isShowAddTodo = (show) => {
-      setShowAddTodo(show);
-  }
+    const isShowAddTodo = (show) => {
+        setShowAddTodo(show);
+    }
 
-  return (
-    <Router>
-      <Fragment className="App">
-        <AddTodo className="popup" show={showAddTodo} handleShow={isShowAddTodo}/>
-        <Navbar/>
-        <div className="content">
-            <Routes>
-              <Route path='/' element={ 
-                <Home todos={todos} 
-                      handleIsDone={handleIsDone}  
-                      handleDelete={handleDelete} 
-                      isShowAddTodo={isShowAddTodo}/> 
-                }/>
-            </Routes>
-          </div>
-      </Fragment>
-    </Router>
-  );
+    const addTodo = (title) => {
+        var todo = {
+            id: todos[todos.length - 1].id + 1,
+            title:title,
+            isDone:false
+        }
+        todos.push(todo);
+        setTodos(todos);
+    }
+
+    return (
+        <Router>
+        <div className="App">
+            <AddTodo className="popup" show={showAddTodo} handleShow={isShowAddTodo} addTodo={addTodo}/>
+            <Navbar/>
+            <div className="content">
+                <Routes>
+                <Route path='/' element={ 
+                    <Home todos={todos} 
+                        handleIsDone={handleIsDone}  
+                        handleDelete={handleDelete} 
+                        isShowAddTodo={isShowAddTodo}/> 
+                    }/>
+                </Routes>
+            </div>
+        </div>
+        </Router>
+    );
 }
 
 export default App;
