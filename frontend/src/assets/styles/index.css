@@ -25,3 +25,23 @@
   color: #9a30fd;
   transform: scale(0.96);
 }
+
+.button {
+  font-size: 18px;
+  display: flex;
+  position: absolute;
+  left: 40%;
+  margin-top: 20px;
+  background: #9a30fd;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}

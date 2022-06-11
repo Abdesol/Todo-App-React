@@ -3,7 +3,9 @@ import '../assets/styles/index.css';
 import { MdDelete } from "react-icons/md"
 import { useEffect, useState } from 'react';
 
-
+/*
+A layout for todo list
+*/
 const TodoList = ({todos, handleIsDone, handleDelete}) => {
 
     return ( 
